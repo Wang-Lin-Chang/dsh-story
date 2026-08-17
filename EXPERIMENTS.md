@@ -1,6 +1,6 @@
-﻿# dsh-story 实验记录
+# dsh-story 实验记录
 
-> 原则：没实测不声称。全部实验装置在本仓库脚本（foreshadow-demo / story-invariant-demo / demo2 / perf / feisheng / real-book），判决按原始数据核对。
+> 原则：没实测不声称。全部实验装置（foreshadow-demo / story-invariant-demo / demo2 / perf / feisheng / real-book）的判决按原始数据核对记录于本文。
 
 ## EXP-1 伏笔债务审计（foreshadow-demo.mjs）
 

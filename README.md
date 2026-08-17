@@ -1,4 +1,4 @@
-﻿# dsh-story
+# dsh-story
 
 > Long-form novel assistant for DeepSeek Harness: a **story ledger** (characters/assets/relations/emotions) with append-only event sourcing, chapter anchors with pre-commit/reconciliation, foreshadow debt audit, and **14 narrative invariants checked by hard rules — zero mis-kills**. AI reviews can miss; the ledger can't.
 >
@@ -26,7 +26,7 @@
 | 大规模性能（1000 章 × 100 人物 × 20 万事件）| 全库审计 p50 83.7ms · 3/3 召回 |
 | 《飞升之后》真实文本（ch001/ch002 实战）| 全流程通 · 漂移注入当场枪毙 |
 
-全部实验装置在 `lab 脚本`（demo/perf/real-book）与 `EXPERIMENTS.md`。
+全部实验装置的判决记录在 `EXPERIMENTS.md`（数据可复核）。
 
 ## 工具 / Tools
 
