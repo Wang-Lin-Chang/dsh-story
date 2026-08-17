@@ -1,5 +1,5 @@
 {
-  "name": "dsh-story",
+  "name": "@wang--lin--chang/dsh-story",
   "version": "0.1.0",
   "description": "Long-form novel assistant for DeepSeek Harness: a story ledger (characters/assets/relations/emotions), chapter anchors with reconciliation, foreshadow debt audit, and 14 narrative invariants checked by hard rules — zero mis-kills. Every claim carries an experiment number.",
   "type": "module",
