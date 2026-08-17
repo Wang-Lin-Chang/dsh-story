@@ -1,0 +1,23 @@
+{
+  "name": "dsh-story",
+  "version": "0.1.0",
+  "description": "Long-form novel assistant for DeepSeek Harness: a story ledger (characters/assets/relations/emotions), chapter anchors with reconciliation, foreshadow debt audit, and 14 narrative invariants checked by hard rules — zero mis-kills. Every claim carries an experiment number.",
+  "type": "module",
+  "main": "src/plugin.ts",
+  "files": ["src/", "test/", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --experimental-strip-types test/plugin-integration.test.ts"
+  },
+  "keywords": ["dsh-plugin", "dsh", "deepseek-harness", "novel", "writing", "story", "consistency", "narrative"],
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22.6" },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.1",
+    "@deepseek-ai/dsh-tools": "0.1.0-rc.6",
+    "@types/node": "^22.20.1"
+  },
+  "author": "Wang-Lin-Chang"
+}
