@@ -1,4 +1,4 @@
-﻿// dsh-story/story-invariant-core.mjs —— 叙事不变量审计引擎（声明式硬规则 + 事件流回放，零依赖）
+// dsh-story/story-invariant-core.mjs —— 叙事不变量审计引擎（声明式硬规则 + 事件流回放，零依赖）
 // 审计引擎设计：规则是数据（声明式 JSON），不是代码——规则集可插拔、可扩展、可进 story-spec 规范
 // 设计原则：硬规则零误杀（每条规则只报确定违反，语义边界交给软审层）
 import { DatabaseSync } from 'node:sqlite'
@@ -13,7 +13,7 @@ export const INVARIANTS = {
       // 性能实验判决：初始快照事件化（建档时写 chapter=0 种子事件）——真理模型统一为单一事件流，
       // 规则变纯 SQL 聚合（无 JOIN：SQL JOIN 版 2979ms 弃用；JS 回放 93ms 被纯聚合替代）
       return db.prepare("SELECT target, SUM(delta) AS cur FROM events WHERE field='wallet' GROUP BY target HAVING cur < 0").all()
-        .map(r => ({ code: 'ASSET_NON_NEGATIVE', detail: `${r.target} 资产回放为负（${r.cur}）——口袋不可能欠这个世界` }))
+        .map(r => ({ code: 'ASSET_NON_NEGATIVE', detail: `${r.target} 资产回放为负（${r.cur}）——账本不可能为负` }))
     },
   },
   REALM_MONOTONIC: {

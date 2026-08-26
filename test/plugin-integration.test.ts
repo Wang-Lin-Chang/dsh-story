@@ -1,4 +1,4 @@
-// dsh-story/test/plugin-integration.test.ts —— 插件集成验收：五工具全链路（开书→状态卡→结算→审计→查世界）
+// dsh-story/test/plugin-integration.test.ts —— 插件集成验收：五工具全链路（开书→状态卡→结算→审计→查设定）
 import { Context } from '@deepseek-ai/cordis'
 import { apply } from '../src/plugin.ts'
 import * as fs from 'node:fs'
@@ -53,7 +53,7 @@ const ROOT = fs.mkdtempSync(path.join(os.tmpdir(), 'story-plugin-'))
   const rep2 = b.audit()
   check('审计引擎跑通', typeof rep2.engineMs === 'number' && rep2.engineMs > 0)
   const chs = b.db.prepare('SELECT * FROM characters').all()
-  check('世界查询：人物账', chs.length >= 2)
+  check('设定查询：人物账', chs.length >= 2)
   b.db.close()
 }
 

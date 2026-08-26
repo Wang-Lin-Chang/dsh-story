@@ -120,7 +120,7 @@ export class StoryBook {
     return { verdict, words, problems, warnings }
   }
 
-  // ---------- 写前状态卡（草稿前喂给作者/AI 的"此刻世界快照"） ----------
+  // ---------- 写前状态卡（草稿前喂给作者/AI 的"此刻设定快照"） ----------
   stateCard(slug = null, focusIds = null) {
     const chs = this.db.prepare('SELECT * FROM characters').all()
     const card = { chapter: slug, characters: [], openForeshadows: [], debts: [] }

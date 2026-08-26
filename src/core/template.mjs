@@ -1,5 +1,5 @@
-// dsh-story/src/core/template.mjs —— 世界模板引擎：模板 JSON 编译成审计配置 + 校验声明
-// 模板即状态机：换一个 JSON = 换一个世界的物理法则（境界链/货币/地图/unique 物品/节奏红线）
+// dsh-story/src/core/template.mjs —— 设定模板引擎：模板 JSON 编译成审计配置 + 校验声明
+// 模板即状态机：换一个 JSON = 换一套设定的物理法则（境界链/货币/地图/unique 物品/节奏红线）
 export const XIANXIA_TEMPLATE = {
   id: 'xianxia-v1',
   name: '仙侠·境界流',
@@ -19,7 +19,7 @@ export const XIANXIA_TEMPLATE = {
     'AGE_FLOW', 'ITEM_UNIQUE', 'DEBT_BALANCE', 'NAME_UNIQUE', 'SECT_LOYALTY', 'PLACE_GHOST',
   ],
   seedPrompts: {
-    opening: '开书三问：主角缺什么（匮乏）？世界欠他什么（仇/债）？第一场冲突在几章内爆发？',
+    opening: '开书三问：主角缺什么（匮乏）？设定欠他什么（仇/债）？第一场冲突在几章内爆发？',
     chapterHook: '每章末留钩：一个未答的问题 / 一个未到的危机 / 一个未亮的伏笔。',
   },
 }

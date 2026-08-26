@@ -1,4 +1,4 @@
-// dsh-story/src/story-tools.ts —— 写作五工具（作者视角：开书/状态卡/结算/审计/查世界）
+// dsh-story/src/story-tools.ts —— 写作五工具（作者视角：开书/状态卡/结算/审计/查设定）
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { Context } from '@deepseek-ai/cordis'
 import type { StoryManager } from './plugin.ts'
@@ -17,7 +17,7 @@ export function apply(ctx: Context) {
 
   tools.register(defineTool({
     name: 'story_new',
-    description: '开一本新书：世界模板（默认仙侠·境界流）+ 人物建档。世界状态存账本，跨会话跨重启有效。',
+    description: '开一本新书：设定模板（默认仙侠·境界流）+ 人物建档。设定状态存账本，跨会话跨重启有效。',
     parameters: {
       name: { type: 'string', required: true, description: '书名（目录名，如 feisheng）' },
       characters: { type: 'array', items: { type: 'object', additionalProperties: false, properties: { id: { type: 'string' }, name: { type: 'string' }, realm: { type: 'string' }, wallet: { type: 'number' } } }, description: '初始人物（含境界/初始资产）' },
@@ -37,7 +37,7 @@ export function apply(ctx: Context) {
 
   tools.register(defineTool({
     name: 'story_draft',
-    description: '写前状态卡：从账本生成"此刻世界"快照（人物状态/资产/未收伏笔），动笔前喂给作者或 AI。',
+    description: '写前状态卡：从账本生成"此刻设定"快照（人物状态/资产/未收伏笔），动笔前喂给作者或 AI。',
     parameters: {
       name: { type: 'string', required: true, description: '书名' },
       chapter: { type: 'string', required: true, description: '章节 slug（如 0003-归墟海）' },
@@ -93,7 +93,7 @@ export function apply(ctx: Context) {
 
   tools.register(defineTool({
     name: 'story_world',
-    description: '查世界：人物/伏笔/事件溯源查询（谁活着/欠谁多少/哪章发生了什么）。',
+    description: '查设定：人物/伏笔/事件溯源查询（谁活着/欠谁多少/哪章发生了什么）。',
     parameters: {
       name: { type: 'string', required: true, description: '书名' },
       query: { type: 'string', description: '查询：characters（人物账）/ foreshadows（伏笔账）/ events:<target>（某角色事件溯源）' },
